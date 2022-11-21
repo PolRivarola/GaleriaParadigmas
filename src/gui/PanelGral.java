@@ -532,13 +532,18 @@ public class PanelGral extends javax.swing.JPanel {
     }//GEN-LAST:event_btnMostrarActionPerformed
 
     private void btnBuscarEsculturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarEsculturaActionPerformed
+        try{
         Obras escultura = (Escultura) esculturas.buscarObra(Integer.parseInt(txtIDEscu.getText()));
         if (escultura != null) {
             txtEncontrado.setText(escultura.toString());
         } else {
             txtEncontrado.setText("No se han encontrado resultados...");
         }
-        txtIDEscu.setText("");
+        txtIDEscu.setText("");}
+        catch( Exception e){
+            txtEncontrado.setText("Ingrese Numero de ID porfavor");
+            
+        }
     }//GEN-LAST:event_btnBuscarEsculturaActionPerformed
 
     private void btnEliminarEsculturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarEsculturaActionPerformed
@@ -605,13 +610,18 @@ public class PanelGral extends javax.swing.JPanel {
     }//GEN-LAST:event_btnGuardarEscuActionPerformed
 
     private void btnBuscarPinturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarPinturaActionPerformed
+        try{
         Obras pintura = (Pintura) pinturas.buscarObra(Integer.parseInt(txtID.getText()));
         if (pintura != null) {
             txtEncontrado1.setText(pintura.toString());
         } else {
             txtEncontrado1.setText("No se han encontrado resultados...");
         }
-        txtID.setText("");
+        txtID.setText("");}
+        catch( Exception e){
+            txtEncontrado1.setText("Ingrese Numero de ID porfavor");
+            
+        }
     }//GEN-LAST:event_btnBuscarPinturaActionPerformed
 
     private void btnEliminarPinturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarPinturaActionPerformed
